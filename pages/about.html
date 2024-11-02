@@ -1,0 +1,569 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="../js/jquery-3.7.1.min.js"> </script>
+        <script src="../js/jqueryui/jquery-ui.min.js"></script>
+
+        <link href="../js/jqueryui/jquery-ui.min.css" rel="stylesheet" type="text/css"></link>
+        
+        <meta  charset="utf-8">
+        <meta name= "viewport" content="width=device-width,initial-scale=1">
+        <meta name="auther" content="Shivam Mishra">
+        <meta name="keyword" content="Top computer college">
+       <style>
+         #header {
+
+background-color:#fe0195;
+font-size: 18px;
+text-align: center;
+font-weight: bold;
+color: white;
+}
+.icon {
+        color: white;
+    }
+
+    
+#about
+{
+background-image: url('../img/aboutImg/a1.jpg');
+ text-align: center;
+ color: rgb(8, 7, 7);
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+#div
+{
+    min-height: 600px;
+    background-color:  rgb(244, 232, 232);
+}
+#div1
+{
+    min-height: 300px;
+    background-color:  rgb(244, 232, 232);
+}
+#div2{
+    text-align: center;
+    min-height: 50px;
+    background-color:  rgb(244, 232, 232);
+
+}
+#div3{
+    text-align: center;
+    min-height: 300px;
+    background-color:  rgb(244, 232, 232);
+
+}
+
+
+
+#div6{
+
+    text-align: center;
+    min-height: 100px;
+    background-color:  rgb(244, 232, 232);
+
+
+}
+a {
+  text-decoration: none;
+  font-size: 22px;
+  /* background-color:  rgb(244, 232, 232); */
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+#div4{
+    text-align: center;
+    min-height: 200px;
+    background-color:  rgb(244, 232, 232);
+
+    
+}
+
+#div5{
+    text-align: center;
+    min-height: 300px;
+    margin-top: 0px;
+    background-color:  rgb(244, 232, 232);
+
+}
+.card {
+  box-shadow: 0 4px 8px 0  rgb(229, 134, 134);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color:  rgb(229, 134, 134);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color:  rgb(229, 134, 134);
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+
+/*#dv1{
+    text-align: center;
+    height: 40px;
+    
+
+
+}*/
+#lo{
+    height: 90px;
+    margin-top: 0px;
+    text-align: center;
+    background-color:  rgb(244, 232, 232);
+
+}
+#lov{
+    height: 80px;
+    text-align: center;
+    background-color:  rgb(244, 232, 232);
+
+}
+#ho{
+    height: 350px;
+    background-image: url('../img/aboutImg/prachi2.jpg');
+    background-repeat: no-repeat;
+ background-size: cover;
+ text-align: center;
+
+}
+
+.navbar-nav {
+        margin-right: 10%;
+        color: black;
+    }
+
+    .nav-item {
+        margin-right: 50px;
+    }
+           
+    
+    #footer{
+	min-height: 50px;
+	background-color: #fe0195;
+	text-align: center;
+	font-weight: 450;
+	font-size: 18px;
+	color: white;
+    margin: 0px;
+
+
+
+}
+</style>
+<script>
+    $(document).ready(function(){
+                $("#dv").accordion({
+
+                               //$("#dv p").css("display","none");
+
+                collapsible:true,
+                active:false
+            });
+            //toggle
+            $("#to").click(function(){
+                $("#img").toggle();
+
+              }) 
+              $("#d1").click(function(){
+                $("#img1").fadeToggle();
+
+              }) 
+              $("#d2").click(function(){
+                $("#img2").slideToggle();
+
+              }) //
+              $("#d3").click(function(){
+                $("#img3").slideToggle();
+              })
+              $("#d4").click(function(){
+                $("#img4").toggle();
+              })
+              $("#d5").click(function(){
+                $("#img5").toggle();
+              })
+              var video = $("#custom-video")[0];
+
+  // Play button click event
+  $("#play-button").click(function() {
+    video.play();
+  });
+
+  // Pause button click event
+  $("#pause-button").click(function() {
+    video.pause();
+  });
+
+  // Volume control
+  $("#volume-control").on("input", function() {
+    video.volume = $(this).val();
+  });
+
+  // Update play/pause buttons based on video state
+  video.onplay = function() {
+    $("#play-button").hide();
+    $("#pause-button").show();
+  };
+
+  video.onpause = function() {
+    $("#play-button").show();
+    $("#pause-button").hide();
+  };
+
+
+        });
+</script>
+          
+    </head>
+    <body>
+        <!--header-->
+    <div class="container-fluid">
+        <div class="row p1" id="header">
+            <div class="col-sm-6">
+                <i class="fa-regular fa-envelope"></i>guruji.com&emsp;
+                <i class="fa-solid fa-phone"></i>+91-9670666382
+
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>&emsp;
+                <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>&emsp;
+                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>&emsp;
+                <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>&emsp;
+            </div>
+        </div>
+    </div>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html" style="font-weight: bold; font-size: 35px;color:#fe0195;">GURUJI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2  mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./loveCalForm.html">Love Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./loveCalForm.html">Calculate Love %</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html" >aboutus</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 pt-5 pb-5" id="about">
+
+                    <h1 style="float: left; margin-left: 40%; font-size: 40px;  color:white;">
+                        About Us 
+                    
+
+                    </h1>    
+                </div>
+                
+            </div>
+            <div class="row" id="div">
+                <div class="col-sm-6" style="margin-top: 70px;">
+                    <img src="../img/aboutImg/pp.jpg"  class="d-block w-100" alt="...">    
+                </div>
+                <div class="col-sm-6"style="margin-top: 150px;">
+                    <h1 style="font-size: 30px;">
+                        Know how much your partner <br>will loves you.....<i class="fa fa-heart-o" style="font-size:25px;color:red"></i>
+                        <br><img src="../img/aboutImg/lo.jpg" style="height: 40px; mix-blend-mode: darken;">
+
+                        <br>
+                  <h4 style="color: rgb(180, 110, 110);"> At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Nunc sed velit dignissim sodales ut. In hac
+                    
+                 </h4><br>
+                 <h4 style="color: rgb(126, 120, 120);">Ultrices vitae auctor eu augue ut lectus. <br>In est ante in nibh mauris cursus mattis.<br> Penatibus et magnis dis parturient montes nascetur. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis.</h4>
+            
+                </div>
+                    
+            </div>
+           <!---- <div class="row" id="div1">
+                <div class="col-sm-1">
+
+                </div>
+
+                <div class="col-sm-9">
+                    <h4 style="font-size: 45px; color:white; margin-left: 15%; margin-top: 60px;">Extra 30% OFF.....<i class="fa fa-heart-o" style="font-size:30px;color:red"></i></h4><br><br>
+                    <h5 style="color: white; margin-left: 15%;"> Laoreet suspendisse interdum consectetur libero id faucibus nisl Ut elit tellus, <br>luctus nec ullamcorper mattis, pulvinar
+                 
+
+                </div>
+                <div class="col-sm-2">
+                <button style="color: white; background-color: brown; height: 40px; width: 160px; margin-top: 70px; ">SHOP NOW</button>
+
+                </div>
+
+                </div>-->
+              <!--  <div class="row" id="div2">
+                    <div class="col-lg-12">
+                        <h1 style="font-size: 40px; margin-left:40px;">Our Clients Review</h1>
+                
+                    </div>
+                </div>
+                <div class="row" id="div3" >
+                    <div class="col-lg-2"></div>
+                   <div class="col-lg-3">
+                    <img src="./img/r3.png" class="d-block w-100" alt="...">
+                 <p>TAYLA SVERJENSKY
+                    Manager</p>
+                 <p style="color: rgb(104, 93, 93);">Suspendisse potenti nullam ac tortor vitae. Vestibulum lectus mauris ultrices eros in cursus turpis massa . Mauris commodo quis imperdiet massa nunc pulvinar sapien et. Sed turpis tincidunt id aliquet risus feugiat in ante tincidunt.
+                </p>
+                   </div>
+                   <div class="col-lg-3">
+                    <img src="./img/r2.png" class="d-block w-100" alt="...">
+                 <p>RICHARD WOMACK
+                    Designer</p>
+                 <p style="color: rgb(104, 93, 93);">Pharetra et ultrices neque ornare aenean. Risus feugiat in ante metus dictum at tempor commodo. Quis imperdiet massa tincidunt nunc. Nibh nisl condimentum id venenatis a condimentum vitae. Porttitor rhoncus dolor purus non enim praesent.</p>
+                   </div>
+                   <div class="col-lg-3">
+                    <img src="./img/r1.png" class="d-block w-100" alt="...">
+                 <p>JOHN DOE
+                    CEO</p>
+                 <p style="color: rgb(104, 93, 93);">Lacus viverra vitae congue eu consequat ac. Ultrices neque ornare aenean euismod elementum nisi. Imperdiet proin leo vel orci porta non. Proin libero nunc consequat interdum varius. lacus vel facilisis volutpat est velit egestas dui Hendrerit dolor</p>
+                   </div>
+                   <div class="col-lg-1"></div>
+
+                </div>--->
+                <div class="row" id="lov">
+                    <div class="col-sm-12">        
+                    <h3>Western Astrology 
+                    </h3>
+                    <img src="../img/aboutImg/lo.jpg" style="height: 40px; mix-blend-mode: darken;">
+
+                </div>
+                </div>
+                <div class="row" id="dv" style="height: 250px;">
+                    <h1>Your Weekly Horoscope </h1>
+                    <p>Know in detail about the planet aspects and planet transits along various houses between November 5 to November 11 and its effect on your personal, professional and love and relationship front. Your horoscope for November 2nd Week highlights how things turn in your favour and when to make the right move based on your stars.</p>
+    <h1> Birth Chart - Free Online Astrology Birth Chart</h1>
+<p>Astrology Birth chart or the Natal Chart is a astrological chart which shows the position of the sun, the moon and other planets at the exact time of a person's birth at a particular place on earth. To draw an accurate birth chart of rasi chart, one has to know his date of birth, exact time of birth and also the place of birth.</p>  
+  <h1> Composite Chart</h1>
+  <p>A composite chart is created using the date of birth of every individual involved in the relationship and the location and time of the establishment of the relationship at issue. Enter the above-mentioned particulars in the Composite Chart Calculator below to generate a free composite chart for the established relationship.</p>
+  <h1> Love SMS Messages & Romantic Messages - Best of Love SMS</h1>
+<p>Are you searching for the best Love SMS Message for your Lover or the perfect Whatsapp love status message? You are at the right place to find the best of short, cute and sweet Love Messages. Collection of Romantic SMS Messages and love quotes for lovers. Mobile phones brought lovers and couples close. Make your love relationship even closer with the best Love SMS and Love Messages. You'll find the best Love SMS and Messages of Love submitted by users. A Love Text Message is the fastest and easiest way to let your partner/lover know how much you care for him/her.</p>
+  
+
+</div>
+<div class="row" id="lo">
+    <div class="col-lg-12">
+        <h2>Articles on Love </h2>
+        <img src="../img/aboutImg/lo.jpg" style="height: 40px; mix-blend-mode: darken;">
+
+
+    </div>
+</div>
+
+
+
+<div class="row" id="div5">
+
+    <div class="col-sm-2">
+
+        <button id="to">Toggle</button><br><br>
+        <div class="card">
+            <img src="../img/aboutImg/l.webp" alt="John" style="width:100%" id="img">
+
+            <p>What is it that makes your fall in love ? Find if</p>
+            
+
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <button id="d1">FadeToggle</button><br><br>
+        <div class="card">
+            <img src="../img/aboutImg/l1.webp" alt="John" style="width:100%" id="img1">
+
+            <p>What is it that makes your fall in love ? Find if</p>
+            
+
+        </div>
+
+    </div>
+    <div class="col-sm-2">
+        <button id="d2">SlideToggle</button><br><br>
+        <div class="card">
+            <img src="../img/aboutImg/l2.webp" alt="John" style="width:100%" id="img2">
+            <p>What is it that makes your fall in love ? Find if</p>
+            
+
+        </div>
+
+    </div>
+    <div class="col-sm-2">
+        <button id="d3">SlideToggle</button><br><br>
+        <div class="card">
+            <img src="../img/aboutImg/l5.webp" alt="John" style="width:100%" id="img3">
+            <p>What is it that makes your fall in love ? Find if</p>
+            
+
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <button id="d4">Toggle</button><br><br>
+        <div class="card">
+            <img src="../img/aboutImg/l3.webp" alt="John" style="width:100%" id="img4">
+            <p>What is it that makes your fall in love ? Find if</p>
+            
+
+        </div>
+
+    </div>
+    <div class="col-sm-2">
+        <button id="d5">FadeToggle</button><br><br>
+        <div class="card">
+            <img src="../img/aboutImg/l4.webp" alt="John" style="width:100%" id="img5">
+            <p>What is it that makes your fall in love ? Find if</p>
+            
+
+        </div>
+
+    </div>
+
+    </div>
+    <div class="row" id="ho">
+        <div class="col-lg-12">
+            <video id="custom-video" controls height="0px" style=" mix-blend-mode: darken; margin-top: 140px;">
+    <source src="../img/aboutImg/lovemp4.mp4" type="video/mp4" >
+
+  </video>
+  <div id="video-controls">
+    <i class="fa fa-play-circle-o" style="font-size:100px;color:rgb(89, 34, 34)" id="play-button"></i>
+    <i class="fa fa-pause-circle-o" style="font-size:100px;color:rgb(89, 34, 34)"  id="pause-button"></i>
+    
+    <!--<input type="range" id="volume-control" min="0" max="1" step="0.1" value="1" style=" mix-blend-mode: darken;">
+    --></div>
+            
+            
+        </div>
+    </div>
+    <div class="row" id="div6">
+        <div class="col-sm-12">
+            <h2>Love Quote Of The Day</h2>
+            <img src="../img/aboutImg/lo.jpg" style="height: 40px; mix-blend-mode: darken;">
+
+
+
+            <p style="font-size: 20px;">"A coward is incapable of exhibiting love; it is the prerogative of the brave." -Mahatma Gandhi</p>
+        </div>
+    </div>
+
+    <div class="row" id="div2">
+        <div class="col-lg-12">
+            <h2 style=" margin-left:40px; margin-top: 30px;">Our Clients Review</h2>
+            <img src="../img/aboutImg/lo.jpg" style="height: 40px; mix-blend-mode: darken;">
+
+    
+        </div>
+    </div>
+    <div class="row" id="div3" >
+        <div class="col-lg-3">
+            <img src="../img/aboutImg/w.jpg" class="d-block w-100" alt="..." style="mix-blend-mode: darken;">
+         <h5>Kajal Sharma
+            HR</h5>
+         <p style="color: rgb(104, 93, 93);">Suspendisse potenti nullam ac tortor vitae. Vestibulum lectus mauris ultrices eros in cursus turpis massa . Mauris commodo quis imperdiet massa nunc pulvinar sapien et. Sed turpis tincidunt id aliquet risus feugiat in ante tincidunt.
+        </p>
+           </div>
+       <div class="col-lg-3">
+        <img src="../img/aboutImg/r3.png" class="d-block w-100" alt="...">
+     <h5>TAYLA SVERJENSKY
+        Manager</h5>
+     <p style="color: rgb(104, 93, 93);">Suspendisse potenti nullam ac tortor vitae. Vestibulum lectus mauris ultrices eros in cursus turpis massa . Mauris commodo quis imperdiet massa nunc pulvinar sapien et. Sed turpis tincidunt id aliquet risus feugiat in ante tincidunt.
+    </p>
+       </div>
+       <div class="col-lg-3">
+        <img src="../img/aboutIMg/r2.png" class="d-block w-100" alt="...">
+     <h5>RICHARD WOMACK
+        Designer</h5>
+     <p style="color: rgb(104, 93, 93);">Pharetra et ultrices neque ornare aenean. Risus feugiat in ante metus dictum at tempor commodo. Quis imperdiet massa tincidunt nunc. Nibh nisl condimentum id venenatis a condimentum vitae. Porttitor rhoncus dolor purus non enim praesent.</p>
+       </div>
+       <div class="col-lg-3">
+        <img src="../img/aboutImg/r1.png" class="d-block w-100" alt="...">
+     <h5>JOHN DOE
+        CEO</h5>
+     <p style="color: rgb(104, 93, 93);">Lacus viverra vitae congue eu consequat ac. Ultrices neque ornare aenean euismod elementum nisi. Imperdiet proin leo vel orci porta non. Proin libero nunc consequat interdum varius. lacus vel facilisis volutpat est velit egestas dui Hendrerit dolor</p>
+       </div>
+
+    </div>
+    
+
+
+
+
+
+                <div class="row" id="div4">
+                    <div class="col-sm-12">
+
+                        <h1 style="font-size: 50px;text-align: center; color: rgb(46, 36, 36); margin-top: 30px;"> GURU JI</h1>                       
+                         <img src="../img/aboutImg/lo.jpg" style="height: 40px;mix-blend-mode: darken;">
+
+                        <h5 style="font-size: 15px;text-align: center; color: rgb(43, 36, 36); margin-top: 10px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<hr></h5>
+                        
+                
+                    </div>
+
+                </div>
+                
+            
+                
+            
+            
+        </div>
+         <!--footer-->
+     <div class="row p-2"id="footer">
+        <div class="col-sm-6"> &copy; All Rights Reserved</div>
+        <div class="col-sm-6">Devloped By GURUGROUP</div>
+      </div>    
+ </body>
+
+</html>

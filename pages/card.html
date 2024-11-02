@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jqueryui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../js/jqueryui/jquery-ui.min.css">
+    <style>
+        .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0">
+        <div  id="hadder" class="row  m-0 p-0 " style="  background-color: #000000; min-height: 40px; color: white;">
+            <div class="row p-2">
+                <div class="col-sm-6  px-5 text-center">
+                  <i class="fa-solid fa-envelope clr"></i> guruji@gmail.com
+                <i class="fa-solid fa-phone clr ms-2"></i> +91 9554124273&emsp;
+                </div>
+                <div class="col-sm-6 text-center">
+                  <ul style="display: flex; list-style-type: none; margin-left: 100px ; ">
+                    <li style="margin-left: 20px;"><i class="fa-brands fa-facebook fa-lg"></i></li>
+                    <li style="margin-left: 15px;"><i class="fa-brands fa-twitter fa-lg"></i></li>
+                    <li style="margin-left: 15px;"><i class="fa-brands fa-instagram fa-lg"></i></li>
+                    <li style="margin-left: 15px;"><i class="fa-brands fa-youtube fa-lg"></i></li>
+                  </ul>
+                </div>
+            </div>
+            <!-- start menu  -->
+            <div class="row p-1  sticky-top">
+              <hr>
+                <div class="col-sm-6 fs-3 fw-bold  text-center" style="color: #ff9100;" >Guru_Ji.com</div>
+                <div class="col-sm-6    m-0">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          
+                            <div class="navbar-toggler-icon my-toggler d-flex justify-content-center align-items-center"
+                            style="background-image: none"><i class="fa-solid fa-bars" style="color:#eeeeee"></i></div>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav" style="margin-left: 5px;">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" style="color: white;" href="../index.html">Home</a>
+                              </li>
+                              
+                              <li class="nav-item">
+                                <a class="nav-link" href="./loveCalIndex.html" style="color: #eeeeee;">Love_Prediction</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="./future.html" style="color: #eeeeee;">future_Prediction</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="./luckno.html" style="color: #eeeeee;">Numberlogy</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="./tarot.html" style="color: #eeeeee;">Tarot</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="./registartion.html" style="color: #eeeeee;">Register</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="./signup.html" style="color: #eeeeee;">Login</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+                
+            </div>
+
+
+                
+              </div>
+            
+          </nav>
+        <div class="row slider m-0 p-0"
+            style="min-height: 650px; background: url(../img/bg5.jpg);background-color: #ffffff; background-size: cover; background-repeat: no-repeat;">
+            <div class="col-sm-12">
+                <div class="container">
+                  <div class="row" style="min-height: 630px; ">
+                    <div class="col-sm-12  text-center" >
+                        <h1 class="mt-3" style="color: #eeeeee;">Choose the card </h1>
+                    </div>
+
+                    <div class="col-sm-12 mt-3" style="display: flex; justify-content: space-around;">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/chariot.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">Chariot</h3>
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                                
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/death.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">Death</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/devil.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">Devil</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/emperor.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">Emperor</h3>
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12 mt-5" style="display: flex; justify-content: space-around;">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/fool.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">fool</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/hanged-man.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">hanged</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/hermit.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">hermit</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/hierophant.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">hierophant</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12 mt-5" style="display: flex; justify-content: space-around;">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/Judgment.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">Judgment</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/justice.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">justice</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/lovers.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">lovers</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/magician.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">magician</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12 mt-5" style="display: flex; justify-content: space-around;">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/moon.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">moon</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/priestess.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">priestess</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/star.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">star</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/strength.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">strength</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12 mt-5" style="display: flex; justify-content: space-around;">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/sun.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">sun</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/temperance.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">sun</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/tower.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">tower</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div><div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="../img/CardImg/wheel.jpg" alt="Avatar" style="width:300px;height:300px;">
+                                <h3 style="background-color: #ff9100;">wheel</h3>
+
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Adout the Card</h1>
+                                <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente modi, ipsum voluptate suscipit sint perspiciatis tenetur officiis fugiat aut mollitia. Neque, distinctio dignissimos. Fuga animi blanditiis officiis, rem distinctio iure consequuntur debitis necessitatibus laborum sapiente, tenetur dolor facilis! Necessitatibus</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="background: url(../img/shape.png); height: 100px;">
+                    
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    </div>
+</body>
+</html>

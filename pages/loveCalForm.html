@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Love Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jqueryui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../js/jqueryui/jquery-ui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        $(document).ready(function () {
+    $('#calculateBtn').click(function () {
+        // Retrieve user inputs from the form
+        var name1 = $('#name1').val().trim().length;
+        var dob1 = $('#dob1').val().split('-');
+        var gender1 = $('#gender1').val().trim().length;
+        var religion1 = $('#religion1').val().trim().length;
+        var name2 = $('#name2').val().trim().length;
+        var dob2 = $('#dob2').val().split('-');
+        var gender2 = $('#gender2').val().trim().length;
+        var religion2 = $('#religion2').val().trim().length;
+
+        // Calculate love percentage 
+        // var lovePercentage = Math.floor(Math.random() * 101); // Random percentage for demonstration
+        var lovePercentage=0;
+        if (
+            name1 == name2 &&
+            dob1[0] == dob2[0] &&
+            dob1[1] == dob2[1] &&
+            dob1[2] == dob2[2] &&
+            gender1 != gender2 &&
+            religion1 == religion2
+        ) {
+            lovePercentage = 100; // Perfect match
+        } else if (
+            (name1 == name2 || religion1 == religion2) &&
+            (dob1[0] == dob2[0] || dob1[1] == dob2[1] || dob1[2] == dob2[2]) &&
+            gender1 != gender2
+        ) {
+            lovePercentage = 90; // High compatibility
+        } else if (
+            (name1 != name2 || religion1 != religion2) &&
+            (dob1[0] != dob2[0] || dob1[1] != dob2[1] || dob1[2] != dob2[2]) &&
+            gender1 == gender2
+        ) {
+            lovePercentage = 70; // Moderate compatibility
+        } else if (
+            (name1 != name2 || religion1 != religion2) &&
+            (dob1[0] == dob2[0] || dob1[1] == dob2[1] || dob1[2] == dob2[2]) &&
+            gender1 != gender2
+        ) {
+            lovePercentage = 50; // Low compatibility
+        } else if (
+            (name1 != name2 || religion1 != religion2) &&
+            (dob1[0] != dob2[0] || dob1[1] != dob2[1] || dob1[2] != dob2[2]) &&
+            gender1 != gender2
+        ) {
+            lovePercentage = 30; // Very low compatibility
+        } else {
+            lovePercentage =0; // No compatibility
+        }
+        
+
+       
+        $('#loveScore').text(lovePercentage + '%');
+
+        // Create a pie chart using Chart.js
+        var ctx = document.getElementById('loveChart').getContext('2d');
+        var data = {
+            labels: ['Love', 'No Love'],
+            datasets: [{
+                data: [lovePercentage, 100 - lovePercentage],
+                backgroundColor: ['green', 'red']
+            }]
+        };
+        var chart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+        });
+
+        // Display a message based on the percentage
+        var message = '';
+        if (lovePercentage >= 80) {
+            message = 'Congratulations! You are a great match!';
+            $('#result').after("<audio src='./img/lovecalculatorImg/tere.mpeg' controls autoplay style='background-color:pink;'></audio>");
+        } else if (lovePercentage >= 60) {
+            message = 'You have a good chance of being together.';
+        } else if(lovePercentage>=50){
+            message = 'You need to work on your compatibility.';
+        }
+        else if(lovePercentage==0){
+            message=''
+        }
+        else{
+            message='May be you need to work on your Compatibility'
+        }
+        $('#loveMessage').html(message+"<br> And Percentage is: "+lovePercentage);
+    });
+});
+
+
+$(function(){
+    // $('#txtdate').datepicker();
+    $('#dob2').datepicker({
+        changeMonth:true,
+        changeYear:true,
+        yearRange:'1947:2023',
+        dateFormat:"dd-mm-yy"
+    })
+    $('#dob1').datepicker({
+        changeMonth:true,
+        changeYear:true,
+        yearRange:'1947:2023',
+        dateFormat:"dd-mm-yy"
+    })
+})
+
+// popup
+$( function() {
+    $( "#loveMessage" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#calculateBtn" ).on( "click", function() {
+      $( "#loveMessage" ).dialog( "open" );
+    });
+  } );
+    </script>
+
+    <style>
+        #loveCalculator{
+    height: auto;
+    width: 100%;
+}
+.form-control{
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius:0;
+    background-color:pink;
+}
+.form-select{
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius:0;
+    background-color:pink;
+
+}
+.labelmargin{
+    margin-top:20px;
+    width:100%;
+}
+body{
+    background-color: pink;
+    font-family: poppins;
+    /* background-image:url('./img/love.jpg'); */
+    background-size: cover;
+}
+.container{
+    box-shadow: inset -8px -8px 12px rgb(185,103,117),
+         inset 8px 8px 12px rgb(201,95,114);
+         height:660px;
+         padding-top: 30px;
+         border-radius: 10px;
+}
+        #header {
+
+background-color:#fe0195;
+font-size: 18px;
+text-align: center;
+font-weight: bold;
+color: white;
+}
+
+.icon {
+color: white;
+}
+
+.navbar-nav {
+margin-right: 10%;
+color: black;
+}
+
+.nav-item {
+margin-right: 50px;
+}
+
+#footer{
+min-height: 50px;
+background-color: #fe0195;
+text-align: center;
+font-weight: 450;
+font-size: 18px;
+color: white;
+margin: 0px;
+
+
+
+}
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div class="container-fluid">
+        <div class="row p1" id="header">
+            <div class="col-sm-6">
+                <i class="fa-regular fa-envelope"></i>guruji.com&emsp;
+                <i class="fa-solid fa-phone"></i>+91-9670666382
+
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>&emsp;
+                <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>&emsp;
+                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>&emsp;
+                <a href="#" class="icon"><i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+     <!--navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-weight: bold; font-size: 35px;color:#fe0195;">&emsp;&emsp;GURUJI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2  mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./loveCalIndex.html">Love Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./loveCalForm.html">Calculate Love %</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html" >aboutus</a>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav> 
+    <!-- main  -->
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 text-center container">
+                <h1 style="color: rgb(0, 0, 0); text-align: center;border-bottom: 1px solid black;">Love Calculator 💕
+                </h1>
+                <form id="loveCalculator">
+                    <div class="labelmargin" style="margin-top:50px;">
+                        <!-- <label for="name1" class="form-label">Your Name:</label> -->
+                        <input type="text" id="name1" class="form-control  text-center" required
+                            placeholder="Enter Your Name">
+                    </div>
+                    <div class="labelmargin">
+                        <!-- <label for="dob1" class="form-label">Your Date of Birth:</label> -->
+                        <input type="text" id="dob1" class="form-control  text-center" placeholder="Enter DOB" required>
+                    </div>
+                    <div class="labelmargin">
+                        <!-- <label for="gender1" class="form-label">Your Gender:</label> -->
+                        <select id="gender1" class="form-select  text-center" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="labelmargin">
+                        <!-- <label for="religion1" class="form-label">Your Religion:</label> -->
+                        <input type="text" id="religion1" placeholder="Enter Your Religion"
+                            class="form-control text-center" required>
+                    </div>
+
+                    <div class="labelmargin">
+                        <!-- <label for="name2" class="form-label">Partner's Name:</label> -->
+                        <input type="text" id="name2" placeholder="Enter Your Partner Name"
+                            class="form-control text-center" required>
+                    </div>
+                    <div class="labelmargin">
+                        <!-- <label for="dob2" class="form-label">Partner's Date of Birth:</label> -->
+                        <input type="text" id="dob2" class="form-control text-center" placeholder="Enter DOB" required>
+                    </div>
+                    <div class="labelmargin">
+                        <!-- <label for="gender2" class="form-label">Partner's Gender:</label> -->
+                        <select id="gender2" class="form-select text-center" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="labelmargin">
+                        <!-- <label for="religion2" class="form-label">Partner's Religion:</label> -->
+                        <input type="text" id="religion2" placeholder="Enter Your Partner Religion"
+                            class="form-control text-center" required>
+                    </div>
+                    <!-- <div id="dialog" title="Love Calculation">
+                        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+                      </div>
+                       
+                      <button id="opener">Open Dialog</button> -->
+
+                    <button type="button" id="calculateBtn"
+                        style="width:40%; margin-top: 20px; background-color: pink;border: 1px solid hotpink;color:black; font-size: 20px;font-weight: 600;">Calculate
+                        Love</button>
+                </form>
+            </div>
+            <div class="col-sm-4 text-center container">
+                <div id="result" title="Love Calculation">
+                    <p style="background: black; color: white;font-weight: bold;border-radius: 10px;">Your Love Score:
+                        <span id="loveScore"></span></p>
+                    <canvas id="loveChart" width="200" height="200"></canvas>
+                    <div title="Love Calculation">
+                        <p id="loveMessage"></p>
+                    </div>
+                    <!-- <p id="loveMessage"></p> -->
+                </div>
+                <!-- <audio src='./img/tere.mpeg' controls></audio> -->
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <!-- <h1>Love Calculator</h1>
+    <form id="loveCalculator">
+        <div>
+            <label for="name1">Your Name:</label>
+            <input type="text" id="name1" required>
+        </div>
+        <div>
+            <label for="dob1">Your Date of Birth:</label>
+            <input type="date" id="dob1" required>
+        </div>
+        <div>
+            <label for="gender1">Your Gender:</label>
+            <select id="gender1" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div>
+            <label for="religion1">Your Religion:</label>
+            <input type="text" id="religion1" required>
+        </div>
+
+        <div>
+            <label for="name2">Partner's Name:</label>
+            <input type="text" id="name2" required>
+        </div>
+        <div>
+            <label for="dob2">Partner's Date of Birth:</label>
+            <input type="date" id="dob2" required>
+        </div>
+        <div>
+            <label for="gender2">Partner's Gender:</label>
+            <select id="gender2" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div>
+            <label for="religion2">Partner's Religion:</label>
+            <input type="text" id="religion2" required>
+        </div>
+
+        <button type="button" id="calculateBtn">Calculate Love</button>
+    </form>
+
+    <div id="result">
+        <p>Your Love Score: <span id="loveScore"></span></p>
+        <canvas id="loveChart" width="200" height="200"></canvas>
+        <p id="loveMessage"></p>
+    </div>
+
+    <script src="./index.js"></script>   -->
+    <div class="row p-2 mt-5" id="footer">
+        <div class="col-sm-6"> &copy; All Rights Reserved</div>
+        <div class="col-sm-6">Devloped By GURUGROUP</div>
+      </div>
+
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jqueryui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../js/jqueryui/jquery-ui.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+  <script>
+     $(document).ready(function(){
+            $("#dob").datepicker({
+                changeMonth:true,
+                changeYear:true,
+                yearRange:'1950:2003',
+                dateFormat:'dd-mm-yy'
+            });
+        })
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  background-color: #FFD180;
+  background-image: url(../img/KnowYourFutureImg/body-bg.png);
+  background-repeat: 100%;
+  background-attachment: fixed;
+}
+
+/* .wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #f0ead8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card {
+    min-height: 400px;
+  width: 35vw;
+  background-color:transparent;
+  border-radius: 15px;
+  box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+input[type="text"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #e8e7e7;
+}
+input[type="button"] {
+  background-color: #f73668;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.4s all;
+}
+input[type="button"]:hover {
+  background-color: #fff;
+  color: #f73668;
+  border: 2px solid currentColor;
+}
+
+input[type="text"],
+input[type="button"] {
+  border-radius: 15px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+}
+input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 80vw;
+  }
+}
+.header{
+            
+            /* width: 100%; */
+            padding: 10px 5%;
+            background: rgb(133, 139, 46);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* z-index: 100; */
+        }
+        .logo{
+            font-size: 32px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .navbar a{
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500px;
+            margin-left: 35px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+       
+        <div class="row" >
+            <header class="header">
+                <a href="./knowyourfuture.html" class="logo">भविष्यफल </a>
+                <nav class="navbar">
+                    <a href="../index.html">Home</a>
+                    <a href="#"> गोचर</a>
+                    <a href="#">राशि</a>
+                    <a href="#">ज्योतिष</a>
+                    
+                </nav>
+            </header>
+        </div>
+        <div class="row p-3"></div>
+        <div class="row" style="min-height: 700px;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 bg-light"  style="min-height: 1150px;">
+                <div class="row mt-5" >
+                    <div class="col-sm-7" style="display: flex;align-items: center;justify-content: center;">
+                        <div class="card " style="background-image: url(../img/knowYourFutureImg/futurepredict.gif);background-repeat: no-repeat;background-size: cover;">
+                          <div class="mt-5">
+                              <input type="text" id="dob" placeholder="enter your Dob" ><br>
+                              <input type="text" id="name" placeholder="Enter Your Name" >
+                              <input type="button"id="btnsubmit" value="Find Your Future" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              
+                         
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 p-4">
+                        <h2>Future Based on Planets <hr></h2>
+                        <h4>How it affect the life on Earth?</h4>
+                        <div style="width:65%;height: 2px; background-color: #FFD180;"></div>
+                        <p>We follow the "Geocentric System" in Astrology where it is assumed that all the major planets revolve around the Earth or we can say, Earth is taken as a center.</p>
+                       <span>Now let’s understand how these planets give an impact over our life astrologically:-
+                       
+                       </span>
+                    </div>
+                </div>
+                    
+                 <div class="row mt-5">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                         
+<div id="accordion">
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Sun:</span></h3>
+    <div style="max-height: 150px;">
+      <p>
+       <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+        The planet "Sun" is known as the "King" of Celestial Cabinet. It is a hottest planet among all. It indicates the Government or Authoritative position in the society. It represents our "Soul" and "Father". It provides the energy to all the planets. It illuminates the whole world through its brightness. It rules over "Leo" sign and gets exalted in
+      </span> <span style="color:red">"Aries"</span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Moon: </span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          It is considered to be an important planet among all as it represents "Mind" of a person. It is also known as "Queen" of Celestial Cabinet. It indicates private sectors or "Private Government". It represents our "Mother" in astrology. When Moon is directly opposite to the Sun in one’s <span style="color:red">Birth Chart </span>, then it forms a good Yoga as Sun’s rays illuminates the energy of the planet Moon. Moon governs to the <span style="color:red">"Cancer"</span> sign and gets exalted in
+                </span> <span style="color:red">"Taurus’</span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Mercury:</span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          This planets reflects the quality of "Prince". Mercury is a planet which indicates the logical ability or calculative ability of a person. It deals with Mathematics and it also provides the knowledge of "Astrology". It is very closer to the Sun. It is also a "Messenger of God" and deals with our communicative ability. It represents our siblings and day to day activities and expressions. It rules over <span style="color:red"> "Gemini"</span> and "Virgo" signs in Astrology and gets exalted in <span style="color:red">"Virgo"</span> sign.
+       </span>
+      </p>
+      
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Jupiter:</span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          It is the "King’s Minister" in the Celestial Cabinet. It represents the Wisdom of a person. It also represents the "Gurus" or "Teachers" which are running into our life. It represents the "Husband" in woman’s chart. It is a religious and most benefic planet. It represents children and family of a person. It rules over <span style="color:red"> "Sagittarius"</span> and "Pisces" and gets exalted in "Cancer" Zodiac sign of Astrology
+        </span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Venus: </span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          This is the planet which everyone seeks for and it acts as a "Princess" in the Celestial Cabinet. Venus indicates Love, Romance, beauty and any kind of relations in one’s life. It also represents the wife, girlfriend or any girl in Men’s Birth Chart. It is Karaka planet for marriage too. It represents the monetary value or finances of a person. It rules over "Taurus" and "Libra" and gets exalted in "Pisces" sign of the Zodiac.
+        </span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Mars: </span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+        It is a Commander In Chief or Soldier of Celestial Cabinet. It shows our fighting ability and aggression. It provides us courage to tackle any situation. It is always in "Hurry" and ready to fight. It shows the "quick respond" or "activeness" of a person. It is a karaka planet of younger co-born, police, army, surgeon etc. It rules over "Aries" and "Scorpio" and gets exalted in "Capricorn".
+      </span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Saturn: </span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          It is " Servant" of the Celestial Cabinet. It represents the masses or public. It is the planet which is known for its judgment. It judges you according to your Karma performed during current birth and gives you marks accordingly. It’s a very slow planet and takes time to provide you results. It shows the "Patience" of a person. It is all about delaying the things. It gets exalted in "Libra" and debilitated in "Aries". It rules over Capricorn and Aquarius signs of the Zodiac Belt.
+        </span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Rahu: </span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          Though it is not a planet, it is basically a North node of a planet Moon. It is also known as "Chhaya Grah" in Vedic Astrology. It has only Head of the Demon. Rahu is always curious about the "Worldly Fame". It always runs after the materialistic things. It is commonly known as "Shanivrat Rahu", that means it behaves like a planet "Saturn". Since it’s bodiless planet so it always wants more and more and never be satisfied with one thing at every aspect of one’s life. It is assumed that it gets exalted in "Taurus/Gemini" and debilitated in "Scorpio/Sagittarius". There is no specific sign for Rahu as it behaves like the sign or planet in which it sits.
+        </span>
+      </p>
+    </div>
+    <h3><span style="font-size: 20px;color: rgba(0, 0, 0, 0.788);font-weight: 600;">Ketu: </span></h3>
+    <div>
+      <p>
+        <span style="font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px;">
+          It is again not a Planet, It is commonly known as South Node of planet Moon. It’s a tail of Demon. It is also a "Chhaya Grah" like Rahu. It doesn’t have interest in worldly fame and desires. It is just opposite to Rahu. It’s a very spiritual planet which seeks only for enlightenment. It is all about separation from materialistic things. It’s a headless planet. Only Ketu is the planet considered for Moksha in this life. It reflects our past life karmas, Sanchit Karma etc. It is believed that Ketu behaves like Planet "Mars". It gets exalted in "Scorpio/Sagittarius" and debilitated in "Taurus/Gemini"
+        </span>
+      </p>
+    </div>
+ </div>
+                       
+                    </div>
+                    <div class="col-sm-1"></div>
+                 </div>   
+                
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Here is your Future---------------------</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style=" min-height: 300px;">
+                <div class="row mt-2" id="md1">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="../js/knowYourFutureJS/data.js"></script>
+    <script>
+      
+        // let dateOfBirth = document.getElementById("dob");
+       
+        // let name=document.getElementById("name");
+
+        $(document).ready(function(){
+          $("#btnsubmit").click(function(){
+           var dob=$("#dob").val()
+           alert(dob);
+            var name=$("#name").val()
+            var dobs=dob.split('-');
+            const month=parseInt(dobs[1]);
+            const day=parseInt(dobs[0]);
+            // alert(month);
+            dateOfBirth = new Date();
+            
+             let zodiacSign = "";
+  let zodiacDate = "";
+  var string="";
+  if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
+   
+    id=11;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 1 && day >= 19) || (month === 2 && day <= 20)) {
+    zodiacSign = "Pisces";
+    zodiacDate = "February 19th — March 20th";
+    id=12;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+    alert(a);
+    alert(b);
+  } else if ((month === 2 && day >= 21) || (month === 3 && day <= 19)) {
+    zodiacSign = "Aries";
+    id=1;
+    zodiacDate = "March 21 — April 19th";
+    id=11;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 3 && day >= 20) || (month === 4 && day <= 20)) {
+    zodiacSign = "Taurus";
+    zodiacDate = "April 20th — May 20th";
+    id=2;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+   
+    popUp(ind,ch);
+  } else if ((month === 4 && day >= 21) || (month === 5 && day <= 20)) {
+    zodiacSign = "Gemini";
+    zodiacDate = "May 21 — June 20th";
+    id=3;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 5 && day >= 21) || (month === 6 && day <= 22)) {
+    zodiacSign = "Cancer";
+    zodiacDate = "June 21 —July 22";
+    id=4;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 6 && day >= 23) || (month === 7 && day <= 22)) {
+    zodiacSign = "Leo";
+    zodiacDate = "July 23rd — August 22";
+    id=5;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
+    zodiacSign = "Virgo";
+    zodiacDate = "August 23 — September 22nd";
+    id=6;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
+    zodiacSign = "Libra";
+    zodiacDate = "September 23 — October 22";
+    id=7;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 9 && day >= 23) || (month === 10 && day <= 21)) {
+    zodiacSign = "Scorpio";
+    zodiacDate = "October 23rd — November 21";
+    id=8;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 10 && day >= 22) || (month === 11 && day <= 21)) {
+    zodiacSign = "Sagittarius";
+    zodiacDate = "November 22 — December 21";
+    id=9;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  } else if ((month === 11 && day >= 22) || (month === 0 && day <= 19)) {
+    zodiacSign = "Capricorn";
+    zodiacDate = "December 22nd — January 19th";
+    id=10;
+    var a=addDates(dob);
+    var b=getSum(a);
+    var ch=Math.abs(4-parseInt(b));
+    var ind=findIndex(id);
+    popUp(ind,ch);
+  }
+  alert(zodiacDate+zodiacSign);
+          })
+        })
+        function showingData(sd){
+          
+        }
+        function findIndex(s){
+      
+          for(x=0;x<arr.length;x++){
+            if(arr[x].zid==s){
+             var index=x;
+            }
+          }
+          alert(index)
+          return index;
+        }
+        function addDates(n){
+          var sume=0;
+          var ar=n.split('-');
+          for(x=0;x<ar.length;x++){
+            sume+=ar[x];
+          }
+          return sume;
+        }
+    //Function to get sum of digits
+    function getSum(n) {
+        let sum = 0;
+        while (n > 0 || sum > 9) {
+             if(n == 0) { 
+                n = sum; 
+                sum = 0; 
+             } 
+             sum = sum + n % 10;
+             n = Math.floor(n / 10);
+        }
+        return sum;
+    }
+   
+function popUp(al,sd)
+   {
+    //  for(x=0;x<arr.length;x++){
+    //      if(arr[x].pid==al){
+    //          var l=x;
+    //      }
+    //  }
+     var string="";
+          if(sd==0){
+        string="According to Astrology your Future will be bright and more helpfull for you and your family."
+          }
+          else if(sd<=2 && sd>0){
+        string="According to Astrology your Future will be good and  helpfull for you and your parents."
+          }
+          else if(sd<=5 && sd>2){
+        string="According to Astrology your study career will not going to good, your Future will be normal and not anything speccial for you and your parents and friends."
+          }
+          else if(sd>5){
+        string="According to Astrology your Future will may be not so good and may be your future will ruined by your foolish activites."
+          }
+    //  var r=document.getElementById("md1");
+     alert("index "+al+" number is: "+sd);
+    var lol="<div>"+
+      "<div class=\"text-center\" style=\"margin-left: 40%; height: 100px;width: 100px; border-radius: 20px;\">"+
+        "<img src=\"../img/KnowYourFutureImg/"+arr[al].img+"\" height=\"100px\" width=\"100px\">"+
+      "</div>"+
+        "<p class=\"mt-3\">"+string+"</p>"+
+       "<hr>"+
+       "<div>"+
+        "<span class=\"p-2\"><b>What your Nature: </b></span><span>"+arr[al].zdescrption+"</span> <br>"+
+        "<span class=\"p-2\"><b>What your Colour: </b></span><span>"+arr[al].zcolour+"</span> <br>"+
+        "<spanclass=\"p-2\"><b>What your Planet: </b></span><span>"+arr[al].zplanet+"</span> <br>"+
+        "<h4>Improvement With:-</h4>"+
+        "<span class=\"p-2\"><b>What to Do: </b> </span><span> "+arr[al].zdone+"</span> <br>"+    
+        "</div>"+
+        "</div>";
+                $("#md1").html(lol);
+ }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../js/jquery-3.7.1.min.js"></script>
+	<script>
+		function login(){
+          var arr=JSON.parse(localStorage.getItem("data1"))||[];
+		  pa=$("#pass").val();
+		  em=$("#mail").val();
+		  for(x=0;x<arr.length;x++){
+			if(arr[x].Password==pa && arr[x].Email==em)
+			alert("Succesfully Loged in");
+		  }}
+		 
+	</script>
+	<script>
+		$(document).ready(function(){
+			var email,pass;
+			$("#btn").click(function(){
+				email=$("#mail").val();
+				pass=$("#pass").val();
+				$("#mail").focus();
+				var status=true;
+				$(".err").remove();
+				$(".break").remove();
+				if(email.length==0)
+				{
+					$("#mail").after("<br class='break'><span class='err'>Please enter your E-mail.</span>");
+					status=false;
+				}
+				if(pass.length==0)
+				{
+					$("#pass").after("<br  class='break'><span class='err'>Please enter your password.</span>");
+					status=false;
+				}
+				return status;
+			})
+			
+		})
+	</script>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,inicial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+			body{
+				background-image: url("../img/bg.jpg");
+        		background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+			}
+        	.row1
+        	{
+        		min-height: 600px;
+        		width: 100%;
+        		background-image: url("../img/bg.jpg");
+        		background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+        	}
+        	.dv{
+        		min-height: 500px;
+        		font-family: serif;
+        		width: 50%;
+        		color: whitesmoke;
+        		text-align: center;
+        		margin-top: 5%;
+        		margin-left: 20%;
+        		border: 2px solid white;
+                        background-color: rgba(90,0,0, 0.2);
+        	}
+
+        	.txt{
+        		height: 40px;
+        		width: 60%;
+        	}
+        	#l{
+        		text-decoration: none;
+        		text-align: right;
+        	}
+        	.a{
+        		color: white;
+        		text-align: right;
+        	}
+        </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div  id="hadder" class="row" style="  background-color: #000000; min-height: 40px; color: white;">
+				<div class="row">
+					<div class="col-sm-6  px-5 text-center">
+					  <i class="fa-solid fa-envelope clr"></i> guruji@gmail.com
+					<i class="fa-solid fa-phone clr ms-2"></i> +91 9554124273&emsp;
+					</div>
+					<div class="col-sm-6 text-center">
+					  <ul style="display: flex; list-style-type: none; margin-left: 100px ; ">
+						<li style="margin-left: 20px;"><i class="fa-brands fa-facebook fa-lg"></i></li>
+						<li style="margin-left: 15px;"><i class="fa-brands fa-twitter fa-lg"></i></li>
+						<li style="margin-left: 15px;"><i class="fa-brands fa-instagram fa-lg"></i></li>
+						<li style="margin-left: 15px;"><i class="fa-brands fa-youtube fa-lg"></i></li>
+					  </ul>
+					</div>
+				</div>
+				<!-- start menu  -->
+				<div class="row sticky-top m-0 p-0">
+				  <hr>
+					<div class="col-sm-6 fs-3 fw-bold  text-center" style="color: #ff9100;" >Guru_Ji.com</div>
+					<div class="col-sm-6">
+						<nav class="navbar navbar-expand-lg m-0 p-0">
+							<div class="container-fluid">
+							  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							  
+								<div class="navbar-toggler-icon my-toggler d-flex justify-content-center align-items-center"
+								style="background-image: none"><i class="fa-solid fa-bars" style="color:#eeeeee"></i></div>
+							  </button>
+							  <div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav" style="margin-left: 5px;">
+								  <li class="nav-item">
+									<a class="nav-link active" aria-current="page" style="color: white;" href="../index.html">Home</a>
+								  </li>
+								  
+								  <li class="nav-item">
+									<a class="nav-link" href="./loveCalIndex.html" style="color: #eeeeee;">Love_Prediction</a>
+								  </li>
+								  <li class="nav-item">
+									<a class="nav-link" href="./future.html" style="color: #eeeeee;">future_Prediction</a>
+								  </li>
+								  <li class="nav-item">
+									<a class="nav-link" href="./luckno.html" style="color: #eeeeee;">Numberlogy</a>
+								  </li>
+								  <li class="nav-item">
+									<a class="nav-link" href="./tarot.html" style="color: #eeeeee;">Tarot</a>
+								  </li>
+								  <li class="nav-item">
+									<a class="nav-link" href="./contact.html" style="color: #eeeeee;">Contact Us</a>
+								  </li>
+								  <li class="nav-item">
+									<a class="nav-link" href="./registartion.html" style="color: #eeeeee;">Register</a>
+								  </li>
+								  <li class="nav-item">
+									<a class="nav-link" href="./signup.html" style="color: #eeeeee;">Login</a>
+								  </li>
+								  
+								 
+								</ul>
+							  </div>
+							</div>
+						  </nav>
+					</div>
+					
+				</div>
+	
+	
+					
+				  </div>
+		</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-7"> 
+			<div class="dv">
+				<h1>LOGIN FORM</h1><hr style="color: white;">
+				<img src="../img/bg1.png" style="height: 100px;"><br>
+				<input class="txt" type="email" id="mail" placeholder="Enter your email"><br><br>
+				<input class="txt" type="password" id="pass" placeholder="Enter your password"><br><br>
+				<input class="txt bg-success" onclick="login()" type="submit" value="Login" id="btn">
+				<h5>Or</h5>
+				<a href="./registartion.html" style="text-decoration: none;">Registration Now.</a><br>
+			</div>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</div>
+</body>
+</html>
